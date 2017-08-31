@@ -18,10 +18,11 @@
 	
 </head>
 <body>
-
+	<h2 id="info">有人吗？？？</h2>
     <canvas width="500" height="375" id="can1"></canvas>
 	<canvas width="500" height="375" id="can2"></canvas>
 	<video></video>
+	
    
 	<script>
     var canvas = document.getElementById("can1");
@@ -95,8 +96,13 @@
 			console.log(x)
 
 
-			if(x>(proData.data.length/50)){
+			if(x>(proData.data.length/200)){
 				console.log("有人在动！！")
+				document.getElementById("info").innerHTML ='有人在！！'
+			}
+			else{
+				document.getElementById("info").innerHTML ='没人~'
+
 			}
 
 		},1000)
